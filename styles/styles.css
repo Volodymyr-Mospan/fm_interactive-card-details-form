@@ -1,11 +1,123 @@
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  appearance: none;
+:root {
+  --accent-text-color: #21092f;
+
+  --second-text-color: rgba(33, 9, 47, 0.25);
+  --border-color: #dfdee0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 2px;
+
+  color: var(--accent-text-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
 }
 
-/* Firefox */
-input[type="number"] {
-  appearance: textfield;
+.modal {
+  display: flex;
+  max-width: 1440px;
+  min-height: 900px;
+
+  background-image: url(../images/bg-left.svg);
+  background-repeat: no-repeat;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.image-thumb {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  min-width: 541px;
+}
+
+.card-form {
+  max-width: 395px;
+  padding: 7px;
+}
+
+.card-form-lable {
+  display: inline-block;
+  width: 100%;
+}
+
+.label-margin {
+  margin-bottom: 26px;
+}
+
+.card-form-lable p {
+  margin-bottom: 9px;
+  text-transform: uppercase;
+}
+
+.card-form-input {
+  width: 100%;
+  padding: 10px 15px;
+
+  font-family: inherit;
+  font-size: 18px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.card-form-input:hover,
+.card-form-input:focus {
+  outline: 1px solid var(--accent-text-color);
+}
+
+.input-wrapper {
+  display: flex;
+  column-gap: 20px;
+}
+
+.input-date {
+  width: 80px;
+}
+
+.input-date:not(:last-child) {
+  margin-right: 10px;
+}
+
+.card-form-lable > input::placeholder {
+  color: var(--second-text-color);
+}
+
+.form-button {
+  width: 100%;
+  padding: 15px 30px;
+  margin-top: 40px;
+
+  color: #fff;
+  font-size: 18px;
+
+  background-color: var(--accent-text-color);
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.form-button:hover,
+.form-button:focus {
+  opacity: 0.85;
 }

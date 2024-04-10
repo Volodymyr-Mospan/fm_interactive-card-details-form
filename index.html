@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive Card</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -22,34 +29,81 @@
     </header>
 
     <main>
-      <form>
-        <label class="input-lable">
-          Cardholder Name
-          <input type="text" placeholder="e.g. Jane Appleseed" required />
-        </label>
-
-        <label class="input-lable">
-          Card Number
-          <input
-            type="number"
-            placeholder="e.g. 1234 5678 9123 0000"
-            required
+      <div class="modal">
+        <div class="image-thumb">
+          <img src="./images/card-first.svg" alt="main side of credit card" />
+          <img
+            src="./images/card-second.svg"
+            alt="second side of credit card"
           />
-        </label>
+        </div>
 
-        <label class="input-lable">
-          Exp. Date (MM/YY)
-          <input type="number" placeholder="MM" required />
-          <input type="number" placeholder="YY" required />
-        </label>
+        <form class="card-form" action="#">
+          <label class="card-form-lable label-margin">
+            <p>Cardholder Name</p>
+            <input
+              type="text"
+              class="card-form-input"
+              name="card-name"
+              placeholder="e.g. Jane Appleseed"
+              title="e.g. Jane Appleseed"
+              required
+            />
+          </label>
 
-        <label class="input-lable">
-          CVC
-          <input type="number" placeholder="e.g. 123" required />
-        </label>
+          <label class="card-form-lable label-margin">
+            <p>Card Number</p>
+            <input
+              class="card-form-input"
+              type="text"
+              name="card-number"
+              placeholder="e.g. 1234 5678 9123 0000"
+              pattern="\d{4}\s?\d{4}\s?\d{4}\s?\d{4}"
+              title="e.g. 1234 5678 9123 0000"
+              required
+            />
+          </label>
 
-        <button type="submit">Confirm</button>
-      </form>
+          <div class="input-wrapper">
+            <label class="card-form-lable">
+              <p>Exp. Date (MM/YY)</p>
+              <input
+                class="card-form-input input-date"
+                type="text"
+                name="card-month"
+                placeholder="MM"
+                pattern="\d{2}"
+                title="e.g. 09"
+                required
+              />
+              <input
+                class="card-form-input input-date"
+                type="text"
+                name="card-year"
+                placeholder="YY"
+                pattern="\d{2}"
+                title="e.g. 03"
+                required
+              />
+            </label>
+
+            <label class="card-form-lable">
+              <p>CVC</p>
+              <input
+                class="card-form-input input-cvc"
+                type="text"
+                name="card-cvc"
+                placeholder="e.g. 123"
+                pattern="\d{3}"
+                title="e.g. 123"
+                required
+              />
+            </label>
+          </div>
+
+          <button class="form-button" type="submit">Confirm</button>
+        </form>
+      </div>
     </main>
   </body>
 </html>
