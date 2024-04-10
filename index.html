@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Card</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="visually-hidden">Interactive Card Details Form</h1>
+    </header>
+
+    <main>
+      <form>
+        <label class="input-lable">
+          Cardholder Name
+          <input type="text" placeholder="e.g. Jane Appleseed" required />
+        </label>
+
+        <label class="input-lable">
+          Card Number
+          <input
+            type="number"
+            placeholder="e.g. 1234 5678 9123 0000"
+            required
+          />
+        </label>
+
+        <label class="input-lable">
+          Exp. Date (MM/YY)
+          <input type="number" placeholder="MM" required />
+          <input type="number" placeholder="YY" required />
+        </label>
+
+        <label class="input-lable">
+          CVC
+          <input type="number" placeholder="e.g. 123" required />
+        </label>
+
+        <button type="submit">Confirm</button>
+      </form>
+    </main>
+  </body>
+</html>
