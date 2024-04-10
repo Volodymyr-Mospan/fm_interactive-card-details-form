@@ -24,11 +24,17 @@ h4 {
 }
 
 .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 120px;
 
+  width: 100%;
   max-width: 1440px;
   min-height: 900px;
   margin-left: auto;
@@ -36,6 +42,7 @@ h4 {
 
   background-image: url(../images/bg-left.svg);
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .visually-hidden {
@@ -61,7 +68,7 @@ h4 {
 }
 
 .card-form {
-  max-width: 395px;
+  width: 395px;
   padding: 7px;
 }
 
