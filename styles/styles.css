@@ -37,6 +37,7 @@ h4 {
   width: 100%;
   max-width: 1440px;
   min-height: 900px;
+  padding: 20px;
   margin-left: auto;
   margin-right: auto;
 
@@ -60,7 +61,8 @@ h4 {
   display: flex;
   flex-direction: column;
   gap: 37px;
-  min-width: 541px;
+  width: 541px;
+  min-width: 447px;
 }
 
 .image-thumb img:nth-child(2n) {
@@ -112,8 +114,13 @@ h4 {
   width: 80px;
 }
 
-.input-date:not(:last-child) {
-  margin-right: 10px;
+.input-date-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.input-cvc {
+  min-width: 100px;
 }
 
 .card-form-lable > input::placeholder {

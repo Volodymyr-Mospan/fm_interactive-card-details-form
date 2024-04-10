@@ -71,27 +71,33 @@
           </label>
 
           <div class="input-wrapper">
-            <label class="card-form-lable">
-              <span>Exp. Date (MM/YY)</span>
-              <input
-                class="card-form-input input-date"
-                type="text"
-                name="card-month"
-                placeholder="MM"
-                pattern="\d{2}"
-                title="e.g. 09"
-                required
-              />
-              <input
-                class="card-form-input input-date"
-                type="text"
-                name="card-year"
-                placeholder="YY"
-                pattern="\d{2}"
-                title="e.g. 03"
-                required
-              />
-            </label>
+            <div>
+              <label class="card-form-lable" for="inpun-month">
+                <span>Exp. Date (MM/YY)</span>
+              </label>
+
+              <div class="input-date-wrapper">
+                <input
+                  class="card-form-input input-date"
+                  type="text"
+                  id="inpun-month"
+                  name="card-month"
+                  placeholder="MM"
+                  pattern="\d{2}"
+                  title="e.g. 09"
+                  required
+                />
+                <input
+                  class="card-form-input input-date"
+                  type="text"
+                  name="card-year"
+                  placeholder="YY"
+                  pattern="\d{2}"
+                  title="e.g. 03"
+                  required
+                />
+              </div>
+            </div>
 
             <label class="card-form-lable">
               <span>CVC</span>
